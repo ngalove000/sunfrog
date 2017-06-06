@@ -66,12 +66,11 @@ T-Shirt                    </a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav-collapse">
 
-                    <form class="navbar-form navbar-left navbar-main-search" role="search">
+                    <form class="navbar-form navbar-left navbar-main-search" role="search" method="post">
                         <div class="form-group">
-                            <input class="form-control" type="text" placeholder="What are you looking for?" />
+                            <input name="key" class="form-control" type="text" placeholder="What are you looking for?" />
                         </div>
-                        <a class="fa fa-search navbar-main-search-submit" href="#"></a>
-                    </form>
+<button style="border: none;" type="submit" name="btnsearch" class="fa fa-search navbar-main-search-submit"></button>                    </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">About Us</a>
                         </li>
@@ -91,20 +90,20 @@ T-Shirt                    </a>
                             <div class="slider-item-caption-left slider-item-caption-white">
                                 <h3 class="slider-item-caption-title" style="position: relative;top: -85px;">SHIRTS AS UNIQUE AS YOU ARE</h3>
                             </div>
-                            <img class="slider-item-img-right" src="http://www.pngall.com/wp-content/uploads/2016/04/T-Shirt-PNG-HD.png" alt="Image Alternative text" title="Image Title" style="top: 46%; width: 34%;" />
+                            <img class="slider-item-img-right" src="img/banner1.png" alt="Image Alternative text" title="Image Title" style="top: 46%; width: 34%;" />
                         </div>
                     </div>
                 </div>
             </div>
             <div class="owl-item">
-                <div class="slider-item" style="background-image:url(img/concert_2_1200x500.jpg);">
+                <div class="slider-item" style="background-color:#3c763d;">
                     <div class="container">
                         <div class="slider-item-inner">
                             <div class="slider-item-caption-right slider-item-caption-white">
                               <h3 class="slider-item-caption-title" style="position: relative;top: -85px;">SHIRTS AS UNIQUE AS YOU ARE</h3>
 
                             </div>
-                            <img class="slider-item-img-left" src="http://pngimg.com/uploads/tshirt/tshirt_PNG5450.png" alt="Image Alternative text" title="Image Title" style="transform:translateY(-50%) rotate(14deg); width: 37%;" />
+                            <img class="slider-item-img-left" src="img/banner2.png" alt="Image Alternative text" title="Image Title" style="transform:translateY(-50%) rotate(14deg); width: 37%;" />
                         </div>
                     </div>
                 </div>
@@ -117,7 +116,7 @@ T-Shirt                    </a>
                               <h3 class="slider-item-caption-title" style="position: relative;top: -85px;">SHIRTS AS UNIQUE AS YOU ARE</h3>
 
                             </div>
-                            <img class="slider-item-img-right" src="http://pngimg.com/uploads/tshirt/tshirt_PNG5431.png" alt="Image Alternative text" title="Image Title" style="width: 37%" />
+                            <img class="slider-item-img-right" src="img/banner3.png" alt="Image Alternative text" title="Image Title" style="width: 37%" />
                         </div>
                     </div>
                 </div>
@@ -142,6 +141,69 @@ use \Curl\Curl;
 use \DiDom\Document;
 use \DiDom\Query;
 use \DiDom\Element;
+
+if(isset($_POST['btnsearch'])){
+
+$key = $_POST['key'];
+$key = rawurlencode($key);
+$url = "https://www.sunfrog.com/search/?search=".$key;
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  }
+}
+else{
+
 $url = "https://www.sunfrog.com/";
 get_web_page($url,$content);
 $dom = new Document();
@@ -193,6 +255,7 @@ $img = $list->find('img')[0]->getAttribute('data-src');
   <?php
 
 
+}
 }
 ?>
 </div>
