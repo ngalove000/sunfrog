@@ -167,7 +167,7 @@ foreach ($lists as $list) {
   // echo $price;
 $link = $list->find('a')[0]->getAttribute('href');
 // echo $link;
-$link = "https://www.sunfrog.com".$link."?ID12345";
+$link = "https://www.sunfrog.com".$link."?15307";
 $img = $list->find('img')[0]->getAttribute('data-src');
 // echo $img;
   ?>
