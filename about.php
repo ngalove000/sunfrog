@@ -62,8 +62,8 @@
                     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.php">
-                      <img src="img/logo.png" alt="" style="    top: -14px;
-                          position: relative;"></a>
+                    <img src="img/logo.png" alt="" style="    top: -12px; position: relative;">
+                  </a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav-collapse">
 
