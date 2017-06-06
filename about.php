@@ -61,7 +61,7 @@
                 <div class="navbar-header">
                     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="index.php">
 T-Shirt                    </a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -81,222 +81,20 @@ T-Shirt                    </a>
                 </div>
             </div>
         </nav>
-
-        <div class="owl-carousel owl-loaded owl-nav-dots-inner" data-options='{"items":1,"loop":true,"autoplay":true,"autoplayTimeout":5000}'>
-            <div class="owl-item">
-                <div class="slider-item" style="background-color:#3D3D3D;">
-                    <div class="container">
-                        <div class="slider-item-inner">
-                            <div class="slider-item-caption-left slider-item-caption-white">
-                                <h3 class="slider-item-caption-title" style="position: relative;top: -85px;">SHIRTS AS UNIQUE AS YOU ARE</h3>
-                            </div>
-                            <img class="slider-item-img-right" src="img/banner1.png" alt="Image Alternative text" title="Image Title" style="top: 46%; width: 34%;" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-item">
-                <div class="slider-item" style="background-color:#3c763d;">
-                    <div class="container">
-                        <div class="slider-item-inner">
-                            <div class="slider-item-caption-right slider-item-caption-white">
-                              <h3 class="slider-item-caption-title" style="position: relative;top: -85px;">SHIRTS AS UNIQUE AS YOU ARE</h3>
-
-                            </div>
-                            <img class="slider-item-img-left" src="img/banner2.png" alt="Image Alternative text" title="Image Title" style="transform:translateY(-50%) rotate(14deg); width: 37%;" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-item">
-                <div class="slider-item" style="background-color:#93282B;">
-                    <div class="container">
-                        <div class="slider-item-inner">
-                            <div class="slider-item-caption-left slider-item-caption-white">
-                              <h3 class="slider-item-caption-title" style="position: relative;top: -85px;">SHIRTS AS UNIQUE AS YOU ARE</h3>
-
-                            </div>
-                            <img class="slider-item-img-right" src="img/banner3.png" alt="Image Alternative text" title="Image Title" style="width: 37%" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="gap"></div>
-<?php
-error_reporting(E_ALL & ~ E_NOTICE & ~ E_WARNING);
-
-ini_set('memory_limit', '-1');
-set_time_limit(0);
-date_default_timezone_set('Asia/Ho_Chi_Minh');
-include 'libs/Curl/CaseInsensitiveArray.php';
-include 'libs/Curl/Curl.php';
-include 'libs/Curl/MultiCurl.php';
-
-include 'libs/DiDom/Document.php';
-include 'libs/DiDom/Query.php';
-include 'libs/DiDom/Element.php';
-
-use \Curl\Curl;
-use \DiDom\Document;
-use \DiDom\Query;
-use \DiDom\Element;
-
-if(isset($_POST['btnsearch'])){
-
-$key = $_POST['key'];
-$key = rawurlencode($key);
-$url = "https://www.sunfrog.com/search/?search=".$key;
-if(get_web_page($url,$content)){
-  // echo $content;
-
-  $dom = new Document();
-  $dom->load($content);
-  $lists = $dom->find('div[class=frameitWrapper]');
-  // echo $lists;
-  ?>
-  <div class="container">
-
-
-  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
-  </h3>
-  <div class="gap"></div>
-
-  <div class="row" data-gutter="15">
-  <?php
-  foreach ($lists as $list) {
-$title = $list->find('strong[class=text-info title_display]')[0]->text();
-    // $sub = strstr($title,'SKU');
-    // $title = str_replace($sub,'',$title);
-
-    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
-    // echo $price;
-    $link = $list->find('a')[0]->getAttribute('href');
-  // echo $link;
-  $link = $link."?15307";
-  $img = $list->find('img')[0]->getAttribute('data-src');
-  // echo $img;
-    ?>
-
-            <div class="col-md-3">
-                <div class="product ">
-                    <ul class="product-labels"></ul>
-                    <div class="product-img-wrap">
-                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
-                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
-                    </div>
-                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
-                    <div class="product-caption" style="
-      text-align: center;
-  ">
-                        <h5 class="product-caption-title"><?php echo $title?></h5>
-                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
-                        </div>
-                    </div>
+        <div class="container">
+            <header class="page-header">
+                <h1 class="page-title">About Us</h1>
+            </header>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="lead">Content here</p>
                 </div>
             </div>
 
-    <?php
-
-
-  }
-  }
-}
-else{
-
-$url = "https://www.sunfrog.com/";
-get_web_page($url,$content);
-$dom = new Document();
-$dom->load($content);
-$lists = $dom->find('div[class=slide]');
-// var_dump($lists);
-?>
-<div class="container">
-
-
-<h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
-</h3>
-<div class="gap"></div>
-
-<div class="row" data-gutter="15">
-<?php
-foreach ($lists as $list) {
-  $title = $list->find('div[class=shirt_slide_caption]')[0]->text();
-  $sub = strstr($title,'SKU');
-  $title = str_replace($sub,'',$title);
-
-  $price = $list->find('div[class=shirt_slide_button]')[0]->text();
-  // echo $price;
-$link = $list->find('a')[0]->getAttribute('href');
-// echo $link;
-$link = "https://www.sunfrog.com".$link."?15307";
-$img = $list->find('img')[0]->getAttribute('data-src');
-// echo $img;
-  ?>
-
-          <div class="col-md-3">
-              <div class="product ">
-                  <ul class="product-labels"></ul>
-                  <div class="product-img-wrap">
-                      <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
-                      <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
-                  </div>
-                  <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
-                  <div class="product-caption" style="
-    text-align: center;
-">
-                      <h5 class="product-caption-title"><?php echo $title?></h5>
-                      <div class="product-caption-price"><button class="btn btn-primary" onclick=""><?php echo $price?></button>
-                      </div>
-                  </div>
-              </div>
           </div>
+          <div class="gap"></div>
 
-  <?php
 
-
-}
-}
-?>
-</div>
-</div>
-<?php
-function get_web_page( $url, &$content )
-{
-	$ua = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.A.B.C Safari/525.13';
-	$options = array(
-		CURLOPT_USERAGENT 	   => $ua,
-        CURLOPT_RETURNTRANSFER => true,     // return web page
-        CURLOPT_HEADER         => false,    // don't return headers
-        CURLOPT_FOLLOWLOCATION => true,     // follow redirects
-        CURLOPT_ENCODING       => "",       // handle all encodings
-        // CURLOPT_USERAGENT      => "spider", // who am i
-        CURLOPT_AUTOREFERER    => true,     // set referer on redirect
-        CURLOPT_CONNECTTIMEOUT => 120,      // timeout on connect
-        CURLOPT_TIMEOUT        => 120,      // timeout on response
-        CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
-        CURLOPT_SSL_VERIFYPEER => false     // Disabled SSL Cert checks
-        );
-
-	$ch      = curl_init( $url );
-	curl_setopt_array( $ch, $options );
-	$content = curl_exec( $ch );
-	$err     = curl_errno( $ch );
-	$errmsg  = curl_error( $ch );
-	$header  = curl_getinfo( $ch );
-	curl_close( $ch );
-
-	$header['errno']   = $err;
-	$header['errmsg']  = $errmsg;
-	$header['content'] = $content;
-	return $header;
-}
-
- ?>
-
-        <div class="gap"></div>
-
-        <div class="gap"></div>
 
         <footer class="main-footer">
             <div class="container">
