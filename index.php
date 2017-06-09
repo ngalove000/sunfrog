@@ -214,10 +214,13 @@
           					<div class="col-sm-6">&#13;
           						<div class="outdoors_search search_panel">&#13;
           							<span class="headlineStyle text-center" style="margin-bottom:.1em;">What do you<br/>do outdoors</span>&#13;
-          							<form method="get" action="/search/">&#13;
+          							<form method="post">&#13;
           									<div class="input-group col-md-8 col-md-offset-2">&#13;
-          										<input type="hidden" name="cId" value="81"/><input type="hidden" name="sac" value="1"/><input type="hidden" name="schTrmFilter" value="sales"/><input type="text" name="search" class="form-control" placeholder="Hike? Camp? Fish?"/><span class="input-group-btn">&#13;
-          											<button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"/></button>&#13;
+
+                              <input type="text" name="key" class="form-control" placeholder="Hike? Camp? Fish?"/><span class="input-group-btn">&#13;
+          											<button name="btnOut" class="btn btn-primary" type="submit">
+
+                                  <span class="glyphicon glyphicon-search"/></button>&#13;
           										</span>&#13;
           									</div>&#13;
           							</form>&#13;
@@ -438,6 +441,66 @@ if(isset($_POST['btnFit'])){
 $key = $_POST['key'];
 $key = rawurlencode($key);
 $url = "https://www.sunfrog.com/search/?cId=61&schTrmFilter=sales&search=".$key;
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  }
+}
+if(isset($_POST['btnOut'])){
+
+$key = $_POST['key'];
+$key = rawurlencode($key);
+$url = "https://www.sunfrog.com/search/?cId=81&sac=1&schTrmFilter=sales&search=".$key;
 if(get_web_page($url,$content)){
   // echo $content;
 
