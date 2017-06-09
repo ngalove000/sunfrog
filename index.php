@@ -77,7 +77,7 @@
 
                     <form class="navbar-form navbar-left navbar-main-search" role="search" method="post">
                         <div class="form-group">
-                            <input name="key" class="form-control" type="text" placeholder="What are you looking for?" />
+                            <input required="true" name="key" class="form-control" type="text" placeholder="What are you looking for?" />
                         </div>
 <button style="border: none;" type="submit" name="btnsearch" class="fa fa-search navbar-main-search-submit"></button>                    </form>
                     <ul class="nav navbar-nav navbar-right">
