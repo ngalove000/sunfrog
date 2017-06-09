@@ -148,7 +148,7 @@
           							<form method="post">&#13;
           									<div class="input-group col-md-8 col-md-offset-2">&#13;
           										<!-- <input type="hidden" name="cId" value="62"/> -->
-                              <input type="text" name="key" class="form-control" placeholder="What's your favorite pet?"/>
+                              <input required="true" type="text" name="key" class="form-control" placeholder="What's your favorite pet?"/>
                               <span class="input-group-btn">&#13;
           											<button name="btnPet" class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"/></button>&#13;
           										</span>&#13;
@@ -217,7 +217,7 @@
           							<form method="post">&#13;
           									<div class="input-group col-md-8 col-md-offset-2">&#13;
 
-                              <input type="text" name="key" class="form-control" placeholder="Hike? Camp? Fish?"/><span class="input-group-btn">&#13;
+                              <input required="true" type="text" name="key" class="form-control" placeholder="Hike? Camp? Fish?"/><span class="input-group-btn">&#13;
           											<button name="btnOut" class="btn btn-primary" type="submit">
 
                                   <span class="glyphicon glyphicon-search"/></button>&#13;
