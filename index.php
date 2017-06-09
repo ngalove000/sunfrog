@@ -316,6 +316,9 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
 
 
   }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
   }
 }
 if(isset($_POST['btnPet'])){
@@ -376,6 +379,9 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
 
 
   }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
   }
 }
 if(isset($_POST['btnDrink'])){
@@ -436,6 +442,9 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
 
 
   }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
   }
 }
 if(isset($_POST['btnFit'])){
@@ -497,7 +506,6 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
 
   }
   echo "</div>
-  <div class='gap'></div>
   <div class='gap'></div>
   </div>";
   }
@@ -561,7 +569,6 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
 
   }
   echo "</div>
-  <div class='gap'></div>
   <div class='gap'></div>
   </div>";
   }
@@ -631,7 +638,6 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
   }
   echo "</div>
   <div class='gap'></div>
-  <div class='gap'></div>
   </div>";
   }
 }
@@ -675,6 +681,9 @@ function get_web_page( $url, &$content )
 
 
         <footer class="main-footer">
+
+          <div class='gap'></div>
+
             <div class="container">
                 <div class="row row-col-gap" data-gutter="60">
                     <div class="col-md-3">
