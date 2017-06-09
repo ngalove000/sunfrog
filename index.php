@@ -17,6 +17,12 @@
       top:150px;
 
   }
+
+  /*.pet_search {
+    background: url(https://www.sunfrog.com/images/front_end/bg-peg-search.jpg) top center no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+}*/
   </style>
     <title>T-Shirt</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -25,6 +31,7 @@
     <meta name="description" content="TheBox - premium e-commerce template">
     <meta name="author" content="Tsoy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400italic,400' rel='stylesheet' type='text/css'>
     <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
@@ -35,6 +42,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/mystyles.css">
     <link rel="stylesheet" href="css/switcher.css" />
+    <link rel="stylesheet" href="css/find.css" />
     <link rel="alternate stylesheet" type="text/css" href="css/schemes/bright-turquoise.css" title="bright-turquoise" media="all" />
     <link rel="alternate stylesheet" type="text/css" href="css/schemes/turkish-rose.css" title="turkish-rose" media="all" />
     <link rel="alternate stylesheet" type="text/css" href="css/schemes/salem.css" title="salem" media="all" />
@@ -124,6 +132,99 @@
             </div>
         </div>
         <div class="gap"></div>
+
+<!-- Mullti Search -->
+
+
+        <div class="container">
+          <div class="row">&#13;
+          			<div class="col-md-9">&#13;
+          				<div class="row">&#13;
+
+
+          					<div class="col-sm-6">&#13;
+          						<div class="pet_search search_panel">&#13;
+          							<span class="headlineStyle text-center">Love your pet?</span>&#13;
+          							<form method="post">&#13;
+          									<div class="input-group col-md-8 col-md-offset-2">&#13;
+          										<!-- <input type="hidden" name="cId" value="62"/> -->
+                              <input type="text" name="key" class="form-control" placeholder="What's your favorite pet?"/>
+                              <span class="input-group-btn">&#13;
+          											<button name="btnPet" class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"/></button>&#13;
+          										</span>&#13;
+          									</div>&#13;
+          							</form>&#13;
+          						</div>&#13;
+          						<br/></div>&#13;
+
+
+          					<div class="col-sm-6">&#13;
+          						<div class="drink_search search_panel">&#13;
+          							<span class="headlineStyle text-center" style="margin-bottom:.1em;">Drinking Shirts</span>&#13;
+          							<span class="headline_sub_title">Pick your poison</span>&#13;
+          							<form method="post">&#13;
+          									<div class="input-group col-md-8 col-md-offset-2">&#13;
+
+                              <select name="key" class="form-control" onchange="form.submit();">
+                                <option value="Beer">Beer</option>
+                                <option value="Wine">Wine</option>
+                                <option value="Coffee">Coffee</option>
+                              </select>
+
+                              <span class="input-group-btn">&#13;
+          											<button name="btnDrink" class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"/></button>&#13;
+          										</span>&#13;
+          									</div>&#13;
+          							</form>&#13;
+          						</div>&#13;
+          					</div>&#13;
+
+
+          				</div>&#13;
+
+
+          				<br class="visible-xs"/>
+
+                  <div class="row">&#13;
+
+
+          					<div class="col-sm-6">&#13;
+          						<div class="fitness_search search_panel">&#13;
+          							<span class="headlineStyle text-center">Fitness Fanatic?</span>&#13;
+          							<form method="get" action="/search/">&#13;
+          									<div class="input-group col-md-8 col-md-offset-2">&#13;
+          										<input type="hidden" name="cId" value="61"/><input type="hidden" name="schTrmFilter" value="sales"/><select name="search" class="form-control" onchange="form.submit();"><option value="Cycling">Cycling</option><option value="Lifting">Lifting</option><option value="Running">Running</option><option value="Yoga">Yoga</option></select><span class="input-group-btn">&#13;
+          											<button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"/></button>&#13;
+          										</span>&#13;
+          									</div>&#13;
+          							</form>&#13;
+          						</div>&#13;
+          						<br/></div>&#13;
+
+
+          					<div class="col-sm-6">&#13;
+          						<div class="outdoors_search search_panel">&#13;
+          							<span class="headlineStyle text-center" style="margin-bottom:.1em;">What do you<br/>do outdoors</span>&#13;
+          							<form method="get" action="/search/">&#13;
+          									<div class="input-group col-md-8 col-md-offset-2">&#13;
+          										<input type="hidden" name="cId" value="81"/><input type="hidden" name="sac" value="1"/><input type="hidden" name="schTrmFilter" value="sales"/><input type="text" name="search" class="form-control" placeholder="Hike? Camp? Fish?"/><span class="input-group-btn">&#13;
+          											<button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"/></button>&#13;
+          										</span>&#13;
+          									</div>&#13;
+          							</form>&#13;
+          						</div>&#13;
+          					</div>&#13;
+
+
+          				</div>&#13;
+
+          				<br/></div>&#13;
+          			<div class="col-sm-3 visible-md visible-lg">&#13;
+          				<img src="https://www.sunfrog.com/images/front_end/images/new-canvas.jpg" class="img-responsive center-block"/></div>&#13;
+          			&#13;
+          		</div></div>
+
+              <!-- End Multi Search -->
 <?php
 error_reporting(E_ALL & ~ E_NOTICE & ~ E_WARNING);
 
@@ -203,7 +304,78 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
   }
   }
 }
+if(isset($_POST['btnPet'])){
+
+$key = $_POST['key'];
+$key = rawurlencode($key);
+$url = "https://www.sunfrog.com/search/?cId=62&search=".$key;
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  }
+}
+
 else{
+  $url2 = "https://www.sunfrog.com/FindMyShirt/";
+  get_web_page($url2,$content2);
+  $dom2 = new Document();
+  $dom2->load($content2);
+$result = $dom2->find('div[class^=container-fluid]')[2]->find('div[class=row]')[1];
+?>
+
+
+</div>
+<?php
 
 $url = "https://www.sunfrog.com/";
 get_web_page($url,$content);
