@@ -599,11 +599,7 @@ if(get_web_page($url,$content)){
   <?php
   foreach ($lists as $list) {
 $title = $list->find('strong[class=text-info title_display]')[0]->text();
-    // $sub = strstr($title,'SKU');
-    // $title = str_replace($sub,'',$title);
 
-    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
-    // echo $price;
     $link = $list->find('a')[0]->getAttribute('href');
   // echo $link;
   $link = "https://www.sunfrog.com".$link."?15307";
@@ -668,11 +664,7 @@ if(get_web_page($url,$content)){
     }
     $i++;
 $title = $list->find('strong[class=text-info title_display]')[0]->text();
-    // $sub = strstr($title,'SKU');
-    // $title = str_replace($sub,'',$title);
 
-    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
-    // echo $price;
     $link = $list->find('a')[0]->getAttribute('href');
   // echo $link;
   $link = "https://www.sunfrog.com".$link."?15307";
