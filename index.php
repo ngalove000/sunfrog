@@ -18,11 +18,12 @@
 
   }
 
-  /*.pet_search {
-    background: url(https://www.sunfrog.com/images/front_end/bg-peg-search.jpg) top center no-repeat;
-    background-size: cover;
-    padding-top: 100px;
-}*/
+.product-img-primary{
+  max-height: 203px;
+}
+.product-img-alt{
+  max-height: 203px;
+}
   </style>
     <title>T-Shirt</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -573,6 +574,1225 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
   </div>";
   }
 }
+if($_GET['cat']==Automotive){
+
+$url = "https://www.sunfrog.com/".rawurlencode($_GET['cat']);
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Drinking){
+
+$url = "https://www.sunfrog.com/".rawurlencode($_GET['cat']);
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']=="Faith"){
+
+$url = "https://www.sunfrog.com/".rawurlencode($_GET['cat']);
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Fitness){
+
+$url = "https://www.sunfrog.com/".rawurlencode($_GET['cat']);
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Funny){
+
+$url = "https://www.sunfrog.com/".rawurlencode($_GET['cat']);
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Gamer){
+
+$url = "https://www.sunfrog.com/".rawurlencode($_GET['cat']);
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Geek-Tech){
+
+$url = "https://www.sunfrog.com/".rawurlencode($_GET['cat']);
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Hobby){
+
+$url = "https://www.sunfrog.com/".rawurlencode($_GET['cat']);
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Holidays){
+
+$url = "https://www.sunfrog.com/".rawurlencode($_GET['cat']);
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Jobs){
+
+$url = "https://www.sunfrog.com/".rawurlencode($_GET['cat']);if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==LifeStyle){
+
+$url = "https://www.sunfrog.com/LifeStyle/";
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Movies){
+
+$url = "https://www.sunfrog.com/Movies/";
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Names){
+
+$url = "https://www.sunfrog.com/Names/";
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Outdoor){
+
+$url = "https://www.sunfrog.com/Outdoor/";
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Pets){
+
+$url = "https://www.sunfrog.com/Pets/";
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Political){
+
+$url = "https://www.sunfrog.com/Political/";
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==Sports){
+
+$url = "https://www.sunfrog.com/Sports/";
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']==States){
+
+$url = "https://www.sunfrog.com/States/";
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']=="TV Show"){
+
+$url = "https://www.sunfrog.com/".rawurlencode($_GET['cat']);if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+if($_GET['cat']=="Zombies"){
+
+$url = "https://www.sunfrog.com/Zombies/";
+if(get_web_page($url,$content)){
+  // echo $content;
+
+  $dom = new Document();
+  $dom->load($content);
+  $lists = $dom->find('div[class=frameitWrapper]');
+  // echo $lists;
+  ?>
+  <div class="container">
+
+
+  <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
+  </h3>
+  <div class="gap"></div>
+
+  <div class="row" data-gutter="15">
+  <?php
+  foreach ($lists as $list) {
+$title = $list->find('strong[class=text-info title_display]')[0]->text();
+    // $sub = strstr($title,'SKU');
+    // $title = str_replace($sub,'',$title);
+
+    // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
+    // echo $price;
+    $link = $list->find('a')[0]->getAttribute('href');
+  // echo $link;
+  $link = $link."?15307";
+  $img = $list->find('img')[0]->getAttribute('data-src');
+  // echo $img;
+    ?>
+
+            <div class="col-md-3">
+                <div class="product ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img-primary" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                        <img class="product-img-alt" src="<?php echo $img?>" alt="Image Alternative text" title="Image Title" />
+                    </div>
+                    <a class="product-link" href="<?php echo $link?>" target="_blank"></a>
+                    <div class="product-caption" style="
+      text-align: center;
+  ">
+                        <h5 class="product-caption-title"><?php echo $title?></h5>
+                        <div class="product-caption-price"><button class="btn btn-primary" onclick="">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <?php
+
+
+  }
+  echo "</div>
+  <div class='gap'></div>
+  </div>";
+  }
+}
+
 ?>
 
 <?php
@@ -641,9 +1861,125 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
   </div>";
   }
 }
- ?>
 
-<
+
+ ?>
+<div class="container">
+
+ <h2 class="heading_h2 wow bounceInDown animated" data-wow-duration=".5s" style="visibility: visible; animation-duration: 0.5s; animation-name: bounceInDown;">Shop by <strong>category</strong></h2>
+ 		<div class="row catwrap">
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Automotive/'" class="" data-cId="52">Automotive</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Drinking/'" class="" data-cId="78">Drinking</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Faith/'" class="" data-cId="26">Faith</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Fitness/'" class="" data-cId="61">Fitness</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Funny/'" class="" data-cId="19">Funny</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Gamer/'" class="" data-cId="13">Gamer</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Geek-Tech/'" class="" data-cId="24">Geek-Tech</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Hobby/'" class="" data-cId="82">Hobby</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Holidays/'" class="" data-cId="35">Holidays</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Jobs/'" class="" data-cId="79">Jobs</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=LifeStyle/'" class="" data-cId="43">LifeStyle</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Movies/'" class="" data-cId="12">Movies</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Music/'" class="" data-cId="71">Music</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Names/'" class="" data-cId="75">Names</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Outdoor/'" class="" data-cId="81">Outdoor</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Pets/'" class="" data-cId="62">Pets</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Political/'" class="" data-cId="17">Political</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Sports/'" class="" data-cId="27">Sports</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=States//'" class="" data-cId="77">States</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=TV%20Shows/'" class="" data-cId="34">TV Shows</a>
+ 					</div>
+
+
+ 					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
+ 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Zombies/'" class="" data-cId="11">Zombies</a>
+ 					</div>
+
+
+ 		</div>
+    <div class='gap'></div>
+
+  </div>
+
+
 <?php
 function get_web_page( $url, &$content )
 {
@@ -816,9 +2152,7 @@ function get_web_page( $url, &$content )
     <script src="js/switcher.js"></script>
 
 <script type="text/javascript">
-  function test() {
 
-  }
 </script>
 
 </body>
