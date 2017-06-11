@@ -24,6 +24,9 @@
 .product-img-alt{
   max-height: 203px;
 }
+a {
+  cursor: pointer;
+}
   </style>
     <title>T-Shirt</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -1699,7 +1702,7 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
     // echo $price;
     $link = $list->find('a')[0]->getAttribute('href');
   // echo $link;
-  $link = $link."?15307";
+  $link = "https://www.sunfrog.com".$link."?15307";
   $img = $list->find('img')[0]->getAttribute('data-src');
   // echo $img;
     ?>
@@ -1758,9 +1761,9 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
 
     // $price = $list->find('div[class=shirt_slide_button]')[0]->text();
     // echo $price;
-    $link = $list->find('a')[0]->getAttribute('href');
+    // $link = $list->find('a')[0]->getAttribute('href');
   // echo $link;
-  $link = $link."?15307";
+  // $link = "https://www.sunfrog.com".$link."?15307";
   $img = $list->find('img')[0]->getAttribute('data-src');
   // echo $img;
     ?>
@@ -1870,107 +1873,107 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
  		<div class="row catwrap">
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Automotive/'" class="" data-cId="52">Automotive</a>
+ 						<a onclick="window.location.href='?cat=Automotive/'" class="" data-cId="52">Automotive</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Drinking/'" class="" data-cId="78">Drinking</a>
+ 						<a onclick="window.location.href='?cat=Drinking/'" class="" data-cId="78">Drinking</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Faith/'" class="" data-cId="26">Faith</a>
+ 						<a onclick="window.location.href='?cat=Faith/'" class="" data-cId="26">Faith</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Fitness/'" class="" data-cId="61">Fitness</a>
+ 						<a onclick="window.location.href='?cat=Fitness/'" class="" data-cId="61">Fitness</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Funny/'" class="" data-cId="19">Funny</a>
+ 						<a onclick="window.location.href='?cat=Funny/'" class="" data-cId="19">Funny</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Gamer/'" class="" data-cId="13">Gamer</a>
+ 						<a onclick="window.location.href='?cat=Gamer/'" class="" data-cId="13">Gamer</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Geek-Tech/'" class="" data-cId="24">Geek-Tech</a>
+ 						<a onclick="window.location.href='?cat=Geek-Tech/'" class="" data-cId="24">Geek-Tech</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Hobby/'" class="" data-cId="82">Hobby</a>
+ 						<a onclick="window.location.href='?cat=Hobby/'" class="" data-cId="82">Hobby</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Holidays/'" class="" data-cId="35">Holidays</a>
+ 						<a onclick="window.location.href='?cat=Holidays/'" class="" data-cId="35">Holidays</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Jobs/'" class="" data-cId="79">Jobs</a>
+ 						<a onclick="window.location.href='?cat=Jobs/'" class="" data-cId="79">Jobs</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=LifeStyle/'" class="" data-cId="43">LifeStyle</a>
+ 						<a onclick="window.location.href='?cat=LifeStyle/'" class="" data-cId="43">LifeStyle</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Movies/'" class="" data-cId="12">Movies</a>
+ 						<a onclick="window.location.href='?cat=Movies/'" class="" data-cId="12">Movies</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Music/'" class="" data-cId="71">Music</a>
+ 						<a onclick="window.location.href='?cat=Music/'" class="" data-cId="71">Music</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Names/'" class="" data-cId="75">Names</a>
+ 						<a onclick="window.location.href='?cat=Names/'" class="" data-cId="75">Names</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Outdoor/'" class="" data-cId="81">Outdoor</a>
+ 						<a onclick="window.location.href='?cat=Outdoor/'" class="" data-cId="81">Outdoor</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Pets/'" class="" data-cId="62">Pets</a>
+ 						<a onclick="window.location.href='?cat=Pets/'" class="" data-cId="62">Pets</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Political/'" class="" data-cId="17">Political</a>
+ 						<a onclick="window.location.href='?cat=Political/'" class="" data-cId="17">Political</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Sports/'" class="" data-cId="27">Sports</a>
+ 						<a onclick="window.location.href='?cat=Sports/'" class="" data-cId="27">Sports</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=States//'" class="" data-cId="77">States</a>
+ 						<a onclick="window.location.href='?cat=States//'" class="" data-cId="77">States</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=TV%20Shows/'" class="" data-cId="34">TV Shows</a>
+ 						<a onclick="window.location.href='?cat=TV%20Shows/'" class="" data-cId="34">TV Shows</a>
  					</div>
 
 
  					<div class="col-xs-6 col-sm-4 col-md-2 center-block text-center" style="margin-bottom:8px;">
- 						<a onclick="window.location.href='http://sunfrog.dev/?cat=Zombies/'" class="" data-cId="11">Zombies</a>
+ 						<a onclick="window.location.href='?cat=Zombies/'" class="" data-cId="11">Zombies</a>
  					</div>
 
 
