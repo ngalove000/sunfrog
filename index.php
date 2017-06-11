@@ -100,7 +100,7 @@ a {
           <?php
           $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
-          if($host == "http://dotigear.com/")
+          if($host == "dotigear.com/")
           {
            ?>
         <div class="owl-carousel owl-loaded owl-nav-dots-inner" data-options='{"items":1,"loop":true,"autoplay":true,"autoplayTimeout":5000}'>
@@ -144,9 +144,7 @@ a {
             </div>
         </div>
 
-        <?php
-}
-         ?>
+
         <div class="gap"></div>
 
 <!-- Mullti Search -->
@@ -252,7 +250,9 @@ a {
           		</div>
 
             </div>
-
+            <?php
+    }
+             ?>
               <!-- End Multi Search -->
 <?php
 error_reporting(E_ALL & ~ E_NOTICE & ~ E_WARNING);
@@ -288,6 +288,7 @@ if(get_web_page($url,$content)){
   ?>
   <div class="container">
 
+    <div class="gap"></div>
 
   <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
   </h3>
@@ -351,6 +352,7 @@ if(get_web_page($url,$content)){
   ?>
   <div class="container">
 
+    <div class="gap"></div>
 
   <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
   </h3>
@@ -414,6 +416,7 @@ if(get_web_page($url,$content)){
   ?>
   <div class="container">
 
+    <div class="gap"></div>
 
   <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
   </h3>
@@ -477,6 +480,7 @@ if(get_web_page($url,$content)){
   ?>
   <div class="container">
 
+    <div class="gap"></div>
 
   <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
   </h3>
@@ -540,6 +544,7 @@ if(get_web_page($url,$content)){
   ?>
   <div class="container">
 
+    <div class="gap"></div>
 
   <h3 class="widget-title-lg" style="font-size: 32px;">WELCOME TO THE LARGEST ONLINE T-SHIRT PLATFORM IN THE WORLD
   </h3>
