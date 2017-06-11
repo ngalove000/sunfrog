@@ -73,17 +73,19 @@ a {
                 <div class="navbar-header">
                     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php">
+                    <a class="navbar-brand" href="/">
 <img src="img/logo.png" alt="" style="    top: -12px;
     position: relative;"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav-collapse">
 
-                    <form class="navbar-form navbar-left navbar-main-search" role="search" method="post">
+                    <form class="navbar-form navbar-left navbar-main-search" role="search" method="get" >
                         <div class="form-group">
                             <input required="true" name="key" class="form-control" type="text" placeholder="What are you looking for?" />
                         </div>
-<button style="border: none;" type="submit" name="btnsearch" class="fa fa-search navbar-main-search-submit"></button>                    </form>
+<button style="border: none;" type="submit" class="fa fa-search navbar-main-search-submit"></button>
+
+</form>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="about.php" data-effect="mfp-move-from-top" >About Us</a>
                         </li>
@@ -95,6 +97,12 @@ a {
             </div>
         </nav>
 
+          <?php
+          $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+          if($host == "sunfrog.dev/")
+          {
+           ?>
         <div class="owl-carousel owl-loaded owl-nav-dots-inner" data-options='{"items":1,"loop":true,"autoplay":true,"autoplayTimeout":5000}'>
             <div class="owl-item">
                 <div class="slider-item" style="background-color:#3D3D3D;">
@@ -135,6 +143,10 @@ a {
                 </div>
             </div>
         </div>
+
+        <?php
+}
+         ?>
         <div class="gap"></div>
 
 <!-- Mullti Search -->
@@ -149,12 +161,12 @@ a {
           					<div class="col-sm-6">&#13;
           						<div class="pet_search search_panel">&#13;
           							<span class="headlineStyle text-center">Love your pet?</span>&#13;
-          							<form method="post">&#13;
+          							<form method="get">&#13;
           									<div class="input-group col-md-8 col-md-offset-2">&#13;
           										<!-- <input type="hidden" name="cId" value="62"/> -->
-                              <input required="true" type="text" name="key" class="form-control" placeholder="What's your favorite pet?"/>
+                              <input required="true" type="text" name="pet" class="form-control" placeholder="What's your favorite pet?"/>
                               <span class="input-group-btn">&#13;
-          											<button name="btnPet" class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"/></button>&#13;
+          											<button  class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"/></button>&#13;
           										</span>&#13;
           									</div>&#13;
           							</form>&#13;
@@ -166,17 +178,17 @@ a {
           						<div class="drink_search search_panel">&#13;
           							<span class="headlineStyle text-center" style="margin-bottom:.1em;">Drinking Shirts</span>&#13;
           							<span class="headline_sub_title">Pick your poison</span>&#13;
-          							<form method="post">&#13;
+          							<form method="get">&#13;
           									<div class="input-group col-md-8 col-md-offset-2">&#13;
 
-                              <select name="key" class="form-control" onchange="form.submit();">
+                              <select name="drink" class="form-control" onchange="form.submit();">
                                 <option value="Beer">Beer</option>
                                 <option value="Wine">Wine</option>
                                 <option value="Coffee">Coffee</option>
                               </select>
 
                               <span class="input-group-btn">&#13;
-          											<button name="btnDrink" class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"/></button>&#13;
+          											<button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"/></button>&#13;
           										</span>&#13;
           									</div>&#13;
           							</form>&#13;
@@ -195,11 +207,10 @@ a {
           					<div class="col-sm-6">&#13;
           						<div class="fitness_search search_panel">&#13;
           							<span class="headlineStyle text-center">Fitness Fanatic?</span>&#13;
-          							<form method="post">&#13;
+          							<form method="get">&#13;
           									<div class="input-group col-md-8 col-md-offset-2">&#13;
-          										<input type="hidden" name="cId" value="61"/>
-                              <input type="hidden" name="schTrmFilter" value="sales"/>
-                              <select name="key" class="form-control" onchange="form.submit();">
+
+                              <select name="fitness" class="form-control" onchange="form.submit();">
                                 <option value="Cycling">Cycling</option>
                                 <option value="Lifting">Lifting</option>
                                 <option value="Running">Running</option>
@@ -207,7 +218,7 @@ a {
                               </select>
 
                               <span class="input-group-btn">&#13;
-          											<button name="btnFit" class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"/></button>&#13;
+          											<button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"/></button>&#13;
           										</span>&#13;
           									</div>&#13;
           							</form>&#13;
@@ -218,11 +229,11 @@ a {
           					<div class="col-sm-6">&#13;
           						<div class="outdoors_search search_panel">&#13;
           							<span class="headlineStyle text-center" style="margin-bottom:.1em;">What do you<br/>do outdoors</span>&#13;
-          							<form method="post">&#13;
+          							<form method="get">&#13;
           									<div class="input-group col-md-8 col-md-offset-2">&#13;
 
-                              <input required="true" type="text" name="key" class="form-control" placeholder="Hike? Camp? Fish?"/><span class="input-group-btn">&#13;
-          											<button name="btnOut" class="btn btn-primary" type="submit">
+                              <input required="true" type="text" name="out" class="form-control" placeholder="Hike? Camp? Fish?"/><span class="input-group-btn">&#13;
+          											<button class="btn btn-primary" type="submit">
 
                                   <span class="glyphicon glyphicon-search"/></button>&#13;
           										</span>&#13;
@@ -262,9 +273,9 @@ use \DiDom\Document;
 use \DiDom\Query;
 use \DiDom\Element;
 
-if(isset($_POST['btnsearch'])){
+if(isset($_GET['key'])){
 
-$key = $_POST['key'];
+$key = $_GET['key'];
 $key = rawurlencode($key);
 $url = "https://www.sunfrog.com/search/?search=".$key;
 if(get_web_page($url,$content)){
@@ -325,9 +336,9 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
   </div>";
   }
 }
-if(isset($_POST['btnPet'])){
+if(isset($_GET['pet'])){
 
-$key = $_POST['key'];
+$key = $_GET['pet'];
 $key = rawurlencode($key);
 $url = "https://www.sunfrog.com/search/?cId=62&search=".$key;
 if(get_web_page($url,$content)){
@@ -388,9 +399,9 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
   </div>";
   }
 }
-if(isset($_POST['btnDrink'])){
+if(isset($_GET['drink'])){
 
-$key = $_POST['key'];
+$key = $_GET['drink'];
 $key = rawurlencode($key);
 $url = "https://www.sunfrog.com/search/?cId=78&schTrmFilter=sales&search=".$key;
 if(get_web_page($url,$content)){
@@ -451,9 +462,9 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
   </div>";
   }
 }
-if(isset($_POST['btnFit'])){
+if(isset($_GET['fitness'])){
 
-$key = $_POST['key'];
+$key = $_GET['fitness'];
 $key = rawurlencode($key);
 $url = "https://www.sunfrog.com/search/?cId=61&schTrmFilter=sales&search=".$key;
 if(get_web_page($url,$content)){
@@ -514,9 +525,9 @@ $title = $list->find('strong[class=text-info title_display]')[0]->text();
   </div>";
   }
 }
-if(isset($_POST['btnOut'])){
+if(isset($_GET['out'])){
 
-$key = $_POST['key'];
+$key = $_GET['out'];
 $key = rawurlencode($key);
 $url = "https://www.sunfrog.com/search/?cId=81&sac=1&schTrmFilter=sales&search=".$key;
 if(get_web_page($url,$content)){

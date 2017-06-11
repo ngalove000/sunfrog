@@ -61,17 +61,17 @@
                 <div class="navbar-header">
                     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php">
+                    <a class="navbar-brand" href="/">
                       <img src="img/logo.png" alt="" style="    top: -12px;
                           position: relative;"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav-collapse">
 
-                    <form class="navbar-form navbar-left navbar-main-search" role="search" method="post">
-                        <div class="form-group">
-                            <input name="key" class="form-control" type="text" placeholder="What are you looking for?" />
-                        </div>
-<button style="border: none;" type="submit" name="btnsearch" class="fa fa-search navbar-main-search-submit"></button>                    </form>
+                  <form class="navbar-form navbar-left navbar-main-search" role="search" method="get" action="index.php">
+                      <div class="form-group">
+                          <input name="key" class="form-control" type="text" placeholder="What are you looking for?" />
+                      </div>
+<button style="border: none;" type="submit" class="fa fa-search navbar-main-search-submit"></button>                   </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="about.php" data-effect="mfp-move-from-top" >About Us</a>
                         </li>
