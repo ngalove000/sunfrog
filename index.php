@@ -100,7 +100,7 @@ a {
           <?php
           $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
-          if($host == "sunfrog.dev/")
+          if($host == "http://dotigear.com/")
           {
            ?>
         <div class="owl-carousel owl-loaded owl-nav-dots-inner" data-options='{"items":1,"loop":true,"autoplay":true,"autoplayTimeout":5000}'>
