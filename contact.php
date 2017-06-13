@@ -1,242 +1,174 @@
-<!DOCTYPE HTML>
-<html>
+<?php
+include('header.php');
+include('libs/class.phpmailer.php');
+include('libs/class.smtp.php');
+include('libs/class.phpmaileroauth.php');
 
-
-<!-- Mirrored from remtsoy.com/tf_templates/the_box/demo_v1_6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 28 Feb 2017 17:44:48 GMT -->
-<head>
-  <style >
-  .owl-stage-outer
-{
-  max-height: 300px;
-  }
-  .slider-item-caption-left{
-      top:150px;
-  }
-
-  .slider-item-caption-right{
-      top:150px;
-
-  }
-  </style>
-    <title>T-Shirt</title>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
-    <meta name="keywords" content="Template, html, premium, themeforest" />
-    <meta name="description" content="TheBox - premium e-commerce template">
-    <meta name="author" content="Tsoy">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400italic,400' rel='stylesheet' type='text/css'>
-    <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/mystyles.css">
-    <link rel="stylesheet" href="css/switcher.css" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/bright-turquoise.css" title="bright-turquoise" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/turkish-rose.css" title="turkish-rose" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/salem.css" title="salem" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/hippie-blue.css" title="hippie-blue" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/mandy.css" title="mandy" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/green-smoke.css" title="green-smoke" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/horizon.css" title="horizon" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/cerise.css" title="cerise" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/brick-red.css" title="brick-red" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/de-york.css" title="de-york" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/shamrock.css" title="shamrock" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/studio.css" title="studio" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/leather.css" title="leather" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/denim.css" title="denim" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="css/schemes/scarlet.css" title="scarlet" media="all" />
-</head>
-
-<body>
-    <div class="global-wrapper clearfix" id="global-wrapper">
-
-
-        <nav class="navbar navbar-inverse navbar-main yamm">
-            <div class="container">
-                <div class="navbar-header">
-                    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">
-                      <img src="img/logo.png" alt="" style="    top: -12px;
-                          position: relative;"></a>
-                </div>
-                <div class="collapse navbar-collapse" id="main-nav-collapse">
-
-                  <form class="navbar-form navbar-left navbar-main-search" role="search" method="get" action="index.php">
-                      <div class="form-group">
-                          <input name="key" class="form-control" type="text" placeholder="What are you looking for?" />
-                      </div>
-<button style="border: none;" type="submit" class="fa fa-search navbar-main-search-submit"></button>                   </form>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="about.php" data-effect="mfp-move-from-top" >About Us</a>
-                        </li>
-                        <li><a href="contact.php" data-effect="mfp-move-from-top" >Contact</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
+?>
         <div class="container">
             <header class="page-header">
-                <h1 class="page-title">Contact Us</h1>
+                <h1 class="page-title" style="text-align: center;">Contact Us</h1>
             </header>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="lead">Content here</p>
-                </div>
-            </div>
+
 
           </div>
-          <div class="gap"></div>
+          <div class="container">
+
+
+          <div class="col-sm-6 col-sm-offset-3">
+          			<div class="explain" style="    border: 1px solid white;
+    background: white;">
 
 
 
-        <footer class="main-footer">
-            <div class="container">
-                <div class="row row-col-gap" data-gutter="60">
-                    <div class="col-md-3">
-                        <h4 class="widget-title-sm">T-Shirt Shop</h4>
-                        <!-- <p>Volutpat per eget molestie platea suspendisse eget tortor pharetra magna nam senectus</p> -->
-                        <ul class="main-footer-social-list">
-                            <li>
-                                <a class="fa fa-facebook" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-twitter" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-pinterest" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-instagram" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-google-plus" href="#"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <!-- <h4 class="widget-title-sm">Popular Tags</h4>
-                        <ul class="main-footer-tag-list">
-                            <li><a href="#">New Season</a>
-                            </li>
-                            <li><a href="#">Watches</a>
-                            </li>
-                            <li><a href="#">woman</a>
-                            </li>
-                            <li><a href="#">classic</a>
-                            </li>
-                            <li><a href="#">modern</a>
-                            </li>
-                            <li><a href="#">blue</a>
-                            </li>
-                            <li><a href="#">shoes</a>
-                            </li>
-                            <li><a href="#">running</a>
-                            </li>
-                            <li><a href="#">jeans</a>
-                            </li>
-                            <li><a href="#">sports</a>
-                            </li>
-                            <li><a href="#">laptops</a>
-                            </li>
-                        </ul> -->
-                    </div>
-                    <div class="col-md-3">
-                        <h4 class="widget-title-sm">Newsletter</h4>
-                        <form>
-                            <div class="form-group">
-                                <label>Sign up to the newsletter</label>
-                                <input class="newsletter-input form-control" placeholder="Your e-mail address" type="text" />
-                            </div>
-                            <input class="btn btn-primary" type="submit" value="Sign up" />
-                        </form>
-                    </div>
-                </div>
-                <!-- <ul class="main-footer-links-list">
-                    <li><a href="#">About Us</a>
-                    </li>
-                    <li><a href="#">Jobs</a>
-                    </li>
-                    <li><a href="#">Legal</a>
-                    </li>
-                    <li><a href="#">Support & Customer Service</a>
-                    </li>
-                    <li><a href="#">Blog</a>
-                    </li>
-                    <li><a href="#">Privacy</a>
-                    </li>
-                    <li><a href="#">Terms</a>
-                    </li>
-                    <li><a href="#">Press</a>
-                    </li>
-                    <li><a href="#">Shipping</a>
-                    </li>
-                    <li><a href="#">Payments & Refunds</a>
-                    </li>
-                </ul> -->
-                <img class="main-footer-img" src="img/test_footer2.png" alt="Image Alternative text" title="Image Title" />
-            </div>
-        </footer>
-        <div class="copyright-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <!-- <p class="copyright-text">Copyright &copy; <a href="#">TheBox</a> 2014. Designed my remtsoy. All rights reseved</p> -->
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="payment-icons-list">
-                            <li>
-                                <img src="img/payment/visa-straight-32px.png" alt="Image Alternative text" title="Pay with Visa" />
-                            </li>
-                            <li>
-                                <img src="img/payment/mastercard-straight-32px.png" alt="Image Alternative text" title="Pay with Mastercard" />
-                            </li>
-                            <li>
-                                <img src="img/payment/paypal-straight-32px.png" alt="Image Alternative text" title="Pay with Paypal" />
-                            </li>
-                            <li>
-                                <img src="img/payment/visa-electron-straight-32px.png" alt="Image Alternative text" title="Pay with Visa-electron" />
-                            </li>
-                            <li>
-                                <img src="img/payment/maestro-straight-32px.png" alt="Image Alternative text" title="Pay with Maestro" />
-                            </li>
-                            <li>
-                                <img src="img/payment/discover-straight-32px.png" alt="Image Alternative text" title="Pay with Discover" />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/icheck.js"></script>
-    <script src="js/ionrangeslider.js"></script>
-    <script src="js/jqzoom.js"></script>
-    <script src="js/card-payment.js"></script>
-    <script src="js/owl-carousel.js"></script>
-    <script src="js/magnific.js"></script>
-    <script src="js/custom.js"></script>
+          				<p>You have questions. We have answers! Use the form below to contact us!</p>
+          				<form name="CFForm_1" id="CFForm_1" method="post" >
+          						<div class="form-group">
+          							<label for="Email">Your Email</label>
+          							<input id="Email" type="email" name="email" value="" class="form-control" required />
+          						</div>
+
+          						<div class="form-group">
+          							<label for="title">Your Name</label>
+          							<input id="title" type="text" name="name" value="" class="form-control" required max="50"/>
+          						</div>
+
+          						<div class="form-group">
+          							<label for="Phone">Your Phone</label>
+          							<input id="number" type="number" name="phone" value="" class="form-control" required />
+          						</div>
 
 
-    <script src="js/switcher.js"></script>
+          						<div class="form-group">
+          							<label for="Subject">Subject</label>
+          							<input id="subject" type="text" name="subject" value="" class="form-control" required max="100"/>
+          						</div>
 
-<script type="text/javascript">
-  function test() {
+          						<div class="form-group">
+          							<label for="dept">What Department?</label>
+          							<select name="dept" class="form-control"  required>
+          								<option value="Who are you looking for" selected>Who are you looking for?</option>
+          								<option value="Customer Service Ordering">Customer Service &amp; Ordering</option>
+          								<option value="Artist/Affiliate Account Support">Artist/Affiliate Account Support</option>
 
-  }
-</script>
+          								<option value="HR">Employment</option>
+          								<option value="Art Department">Art Department</option>
+          								<option value="Wholesale Department">Wholesale Department</option>
+          								<option value="Press and Editorial Teams">Press and Editorial Teams</option>
+          							</select>
+          						</div>
 
-</body>
+          						<div class="form-group">
+          							<label for="comments">How can we help?</label>
+          							<textarea name="comments" class="form-control"  rows="4" required maxlength="1000"></textarea>
+          						</div>
 
 
-<!-- Mirrored from remtsoy.com/tf_templates/the_box/demo_v1_6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 28 Feb 2017 17:45:57 GMT -->
-</html>
+
+
+          						<div class="col-sm-8 col-sm-offset-2">
+          							<input type="submit" name="submit" class="btn btn-success btn-lg btn-block" value="Send it Now!" />
+          						</div>
+
+          						<div class="clearfix"></div>
+
+          						</form>
+
+
+          						<hr />
+
+          				<address>
+          					<strong>DoTiGear.com</strong><br>
+          					1782 O'Rourke BLVD<Br>
+          					Gaylord MI 49735<Br>
+          					USA<br><br>
+          					<abbr title="Phone">P:</abbr> 989-282-3119<br />
+          					<a href="mailto:legal@SunFrogShirts.com">info@SunFrogShirts.com</a>
+          				</address>
+
+          		 	</div>
+
+          		</div>
+
+</div>
+          <?php
+          error_reporting(E_ALL & ~ E_NOTICE & ~ E_WARNING);
+
+          ini_set('memory_limit', '-1');
+          set_time_limit(0);
+          date_default_timezone_set('Asia/Ho_Chi_Minh');
+
+          if(isset($_POST['submit'])){
+            $email = $_POST['email'];
+            $name = $_POST['name'];
+            $phone = $_POST['phone'];
+            $subject = $_POST['subject'];
+            $dept = $_POST['dept'];
+            $comments = $_POST['comments'];
+
+              $nFrom = "Contact Dotigear";    //mail duoc gui tu dau, thuong de ten cong ty ban
+              $mFrom = 'trannhutkn2@gmail.com';  //dia chi email cua ban
+              $mPass = 'drngalove';       //mat khau email cua ban
+              $nTo = 'Tran Nhut'; //Ten nguoi nhan
+              $mTo = 'trannhutkn2@gmail.com';   //dia chi nhan mail
+              $mail             = new PHPMailer();
+              $body             = $email."<br />".$name."<br />".$phone."<br />".$dept."<br />".$comments."<br />";
+              $title = $subject;   //Tieu de gui mail
+              $mail->IsSMTP();
+              $mail->SMTPDebug = 0;
+              $mail->Debugoutput = 'html';
+              $mail->CharSet  = "utf-8";
+              // $mail->SMTPDebug  = 0;   // enables SMTP debug information (for testing)
+              $mail->SMTPAuth   = true;    // enable SMTP authentication
+              $mail->SMTPSecure = "tls";   // sets the prefix to the servier
+              $mail->Host       = "smtp.gmail.com";    // sever gui mail.
+              $mail->Port       = 587;         // cong gui mail de nguyen
+              // xong phan cau hinh bat dau phan gui mail
+              $mail->Username   = $mFrom;  // khai bao dia chi email
+              $mail->Password   = $mPass;              // khai bao mat khau
+              $mail->SetFrom($mFrom, $nFrom);
+              $mail->AddReplyTo('trannhutkn2@gmail.com', 'Tran Nhut'); //khi nguoi dung phan hoi se duoc gui den email nay
+              $mail->Subject    = $title;// tieu de email
+              $mail->MsgHTML($body);// noi dung chinh cua mail se nam o day.
+              $mail->AddAddress($mTo, $nTo);
+              // thuc thi lenh gui mail
+              if(!$mail->Send()) {
+                  echo "<script>alert('Error !')</script>";
+
+              } else {
+
+                  echo "<script>alert('Send success !')</script>";
+              }
+}
+          function get_web_page( $url, &$content )
+          {
+          	$ua = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.A.B.C Safari/525.13';
+          	$options = array(
+          		CURLOPT_USERAGENT 	   => $ua,
+                  CURLOPT_RETURNTRANSFER => true,     // return web page
+                  CURLOPT_HEADER         => false,    // don't return headers
+                  CURLOPT_FOLLOWLOCATION => true,     // follow redirects
+                  CURLOPT_ENCODING       => "",       // handle all encodings
+                  // CURLOPT_USERAGENT      => "spider", // who am i
+                  CURLOPT_AUTOREFERER    => true,     // set referer on redirect
+                  CURLOPT_CONNECTTIMEOUT => 120,      // timeout on connect
+                  CURLOPT_TIMEOUT        => 120,      // timeout on response
+                  CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
+                  CURLOPT_SSL_VERIFYPEER => false     // Disabled SSL Cert checks
+                  );
+
+          	$ch      = curl_init( $url );
+          	curl_setopt_array( $ch, $options );
+          	$content = curl_exec( $ch );
+          	$err     = curl_errno( $ch );
+          	$errmsg  = curl_error( $ch );
+          	$header  = curl_getinfo( $ch );
+          	curl_close( $ch );
+
+          	$header['errno']   = $err;
+          	$header['errmsg']  = $errmsg;
+          	$header['content'] = $content;
+          	return $header;
+          }
+          include('footer.php');
+          ?>
