@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row row-col-gap" data-gutter="60">
             <div class="col-md-3">
-                <h4 class="widget-title-sm">T-Shirt Shop</h4>
+                <h4 class="widget-title-sm">Dotigear Shirts</h4>
                 <!-- <p>Volutpat per eget molestie platea suspendisse eget tortor pharetra magna nam senectus</p> -->
                 <ul class="main-footer-social-list">
                     <li>
