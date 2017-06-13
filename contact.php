@@ -114,7 +114,7 @@ include('libs/class.phpmaileroauth.php');
               $body             = $email."<br />".$name."<br />".$phone."<br />".$dept."<br />".$comments."<br />";
               $title = $subject;   //Tieu de gui mail
               $mail->IsSMTP();
-              $mail->SMTPDebug = 0;
+              $mail->SMTPDebug = 2;
               $mail->Debugoutput = 'html';
               $mail->CharSet  = "utf-8";
               // $mail->SMTPDebug  = 0;   // enables SMTP debug information (for testing)
@@ -132,7 +132,8 @@ include('libs/class.phpmaileroauth.php');
               $mail->AddAddress($mTo, $nTo);
               // thuc thi lenh gui mail
               if(!$mail->Send()) {
-                  echo "<script>alert('Error !')</script>";
+                  echo "Mailer Error: " . $mail->ErrorInfo;
+;
 
               } else {
 
