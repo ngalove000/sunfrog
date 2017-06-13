@@ -82,8 +82,7 @@ include('libs/class.phpmaileroauth.php');
           					1782 O'Rourke BLVD<Br>
           					Gaylord MI 49735<Br>
           					USA<br><br>
-          					<abbr title="Phone">P:</abbr> 989-282-3119<br />
-          					<a href="mailto:legal@SunFrogShirts.com">info@SunFrogShirts.com</a>
+          					<a href="mailto:dotigearcon@gmail.com">dotigearcon@gmail.com</a>
           				</address>
 
           		 	</div>
@@ -107,10 +106,10 @@ include('libs/class.phpmaileroauth.php');
             $comments = $_POST['comments'];
 
               $nFrom = "Contact Dotigear";    //mail duoc gui tu dau, thuong de ten cong ty ban
-              $mFrom = 'trannhutkn2@gmail.com';  //dia chi email cua ban
-              $mPass = 'drngalove';       //mat khau email cua ban
-              $nTo = 'Tran Nhut'; //Ten nguoi nhan
-              $mTo = 'trannhutkn2@gmail.com';   //dia chi nhan mail
+              $mFrom = 'dotigearcon@gmail.com';  //dia chi email cua ban
+              $mPass = 'Khongbaogiobotay12';       //mat khau email cua ban
+              $nTo = 'Contact Dotigear'; //Ten nguoi nhan
+              $mTo = 'dotigearcon@gmail.com';   //dia chi nhan mail
               $mail             = new PHPMailer();
               $body             = $email."<br />".$name."<br />".$phone."<br />".$dept."<br />".$comments."<br />";
               $title = $subject;   //Tieu de gui mail
@@ -127,7 +126,7 @@ include('libs/class.phpmaileroauth.php');
               $mail->Username   = $mFrom;  // khai bao dia chi email
               $mail->Password   = $mPass;              // khai bao mat khau
               $mail->SetFrom($mFrom, $nFrom);
-              $mail->AddReplyTo('trannhutkn2@gmail.com', 'Tran Nhut'); //khi nguoi dung phan hoi se duoc gui den email nay
+              $mail->AddReplyTo('dotigearcon@gmail.com', 'Contact Dotigear'); //khi nguoi dung phan hoi se duoc gui den email nay
               $mail->Subject    = $title;// tieu de email
               $mail->MsgHTML($body);// noi dung chinh cua mail se nam o day.
               $mail->AddAddress($mTo, $nTo);
